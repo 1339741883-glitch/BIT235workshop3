@@ -1,0 +1,16 @@
+public class NationalDebtCasting {
+    public static void main(String[] args) {
+        // 1. Long to Int
+        long debtLong = 34_000_000_000_000L; 
+        int debtInt = (int) debtLong;
+        System.out.println("Long debt: " + debtLong);
+        System.out.println("Int debt: " + debtInt); 
+        // Value changes due to overflow since it exceeds int max value
+        
+        // 2. Double to Byte
+        double debtDouble = 34_000_000_000_000.0;
+        byte debtByte = (byte) debtDouble;
+        System.out.println("Byte debt: " + debtByte);
+        // Byte range is only -128 to 127, result will be truncated/incorrect
+    }
+}
